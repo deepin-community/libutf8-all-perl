@@ -1,0 +1,2 @@
+version=3
+https://metacpan.org/release/utf8-all   .*/utf8-all-v?(\d[\d.-]+)\.(?:tar(?:\.gz|\.bz2)?|tgz|zip)$

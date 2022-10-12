@@ -1,0 +1,34 @@
+Source: libutf8-all-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 10),
+               perl
+Build-Depends-Indep: libimport-into-perl,
+                     libperlio-utf8-strict-perl,
+                     libtest-exception-perl,
+                     libtest-fatal-perl,
+                     libtest-warn-perl,
+                     perl (>= 5.17.2) | libautodie-perl
+Standards-Version: 4.1.3
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libutf8-all-perl.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-perl/packages/libutf8-all-perl.git
+Homepage: https://metacpan.org/release/utf8-all
+
+Package: libutf8-all-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libimport-into-perl,
+         libperlio-utf8-strict-perl,
+         perl (>= 5.17.2) | libautodie-perl
+Breaks: libautodie-perl (<< 2.12~)
+Description: Perl pragma to turn on UTF-8 everywhere
+ The utf8 pragma allows you to write Perl source code encoded in UTF-8. That
+ means UTF-8 strings, variable names, and regular expressions. utf8::all goes
+ further, and makes @ARGV encoded in UTF-8, and filehandles are opened with
+ UTF-8 encoding turned on by default (including STDIN, STDOUT, STDERR). If you
+ don't want UTF-8 for a particular filehandle, you'll have to set binmode
+ $filehandle.
